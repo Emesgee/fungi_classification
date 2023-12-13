@@ -1,14 +1,40 @@
-# fungi_classification
-Fungi classification in pytorch focusing on image data pipeline
 
+Mushroom Classification Tutorial
+This tutorial guides you through the process of classifying different types of mushrooms using a deep learning model. The dataset pipeline involves downloading mushroom images, creating a data.json file, resizing images, and splitting the dataset into training, validation, and test sets.
 
+Dataset Pipeline
+Step 1: Download Mushroom Images
+Use the "Download All Images" Chrome extension tool to download 100 images of each mushroom type into separate folders.
 
-<p><h2>
-    In this turorial I am going to classify different types of champignon.
-</h2></p><br>
-<b>Dataset pipeline is as follows:</b><br><br>
-<li>1: finding the champignon types and downloading 100 images of each type is its own folder</li>
-<li>2: creating data.json file where each id and label is stored</li>
-<li>3: deleting all png files and resizing all pictures to (200 x 200)</li>
-<li>4: create a test, train and validation datasets variables</li><br>
-<b style ='color:red'>step 3 and 4 will be repeated to ceate (300 X 500) and (600 x 800). This way we have more data in our data set and the prediction in my understanding becomes more accurate</b></p><br>
+Step 2: Create data.json File
+Run the provided Python script to create a data.json file containing mushroom types and labels.
+
+Step 3: Resize Images
+Run the provided Python script to resize images to (600 x 800), (300 x 500), and (200 x 200) pixels.
+
+Step 4: Split Datasets
+Run the provided Python script to split the dataset into training, validation, and test sets.
+
+Model Training
+Train a deep learning model using PyTorch, transfer learning with a pre-trained VGG16 model, and a custom classifier. The training script includes code for data augmentation, learning rate scheduling, and model evaluation.
+
+Test the Model
+Evaluate the trained model on the test set to measure accuracy.
+
+Save the Model
+Save the trained model, optimizer, and other necessary information as a checkpoint file named "VGGNet.pth".
+
+Load the Model
+Use the provided function to load a saved checkpoint and rebuild the model for future use.
+
+Inference
+Use the model for inference on new mushroom images. The provided functions help with image processing and visualization.
+
+Dependencies
+Python 3.x
+PyTorch
+torchvision
+Pillow (PIL)
+Matplotlib
+splitfolders
+Follow the instructions in the tutorial steps to set up the environment and run the code. Have fun exploring and classifying mushrooms!
